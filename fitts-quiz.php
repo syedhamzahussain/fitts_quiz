@@ -1,10 +1,9 @@
 <?php
 /**
  * Plugin Name: Fitts Quiz
- * Description: A custom plugin for Fitts Quiz.
+ * Description: Custom WooCommerce product recommendations.
  * Version: 1.0.0
- * Author: Syed Hamza Hussain
- * Author URI: https://1clickhostings.com
+ * Author: GC
  * License: GPL v2 or Later
  * Text Domain: wc-quiz
 */
