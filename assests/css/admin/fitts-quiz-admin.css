@@ -1,0 +1,127 @@
+.fq-fields {
+    width: 50%;
+}
+.fq-outer-title-icon {
+    float: right;
+    font-size: 14px;
+    font-weight: 700px;
+    cursor: pointer;
+}
+.table-field-outer-title {
+    background: #0505050D;
+    height: auto;
+    width: auto;
+    padding: 12px; 
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 2px;
+    border: 1px solid lightgray;
+    margin: 0px;
+    cursor: grab;
+}
+.table-field-inner-template {
+    padding: 16px;
+    background: #05050F05;
+    border: 1px solid lightgray;
+    border-top: none;
+}
+.inner-field-wrapper select,
+.inner-field-wrapper input {
+    width: 300px;
+}
+.fitts-quiz-action-buttons {
+    padding: 4px;
+    margin-top: 25px;
+}
+.fitts-field-remove {
+    text-align: end;
+}
+
+.inner-fields-multiple-choice .fitts_remove_image {
+    position: absolute;
+    font-size: 10px;
+    cursor: pointer;
+    background: red;
+    color: white;
+    border-radius: 50px;
+    width: 16px;
+    text-align: center;
+    height: 16px;
+    left: 430px;
+}
+
+#post-preview, #edit-slug-box {
+    display: none;
+}
+#quiz_data .quiz_data_column {
+	width: 32%;
+	padding: 0 2% 0 0;
+	float: left;
+}
+#quiz_data .quiz_data_column .form-field label, 
+#quiz_data .quiz_submission_column .form-field label {
+	display: block;
+	padding: 0 0 3px;
+}
+#quiz_data .quiz_data_column .details strong,
+#quiz_data .quiz_submission_column .details strong{
+    display: block;
+    font-size: 14px;
+}
+.quiz_submissions {
+    padding: 1%;
+    width: auto;
+    border: 1px solid lightgray;
+    margin: 1%;
+    background: ivory;
+}
+.quiz_submission_title > p,
+.quiz_submission_footer > p {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0px;
+    width: max-content !important;
+}
+
+.submisson_title_text,
+.submisson_product_title {
+    float: left;
+}
+
+.submisson_title_date,
+.submisson_product_suggested {
+    float: right;
+}
+
+.quiz_submission_title,
+.quiz_submission_footer {
+    padding: 10px 15px 10px 15px;
+    width: auto;
+    height: 20px;
+}
+.quiz_submission_footer,
+.quiz_submission_body {
+    border-top: 1px solid lightgray;
+}
+.quiz_submission_body {
+    display: none;
+}
+.inner-fields-multiple-choice {
+    margin-bottom: 25px;
+}
+
+.toggle-indicator.fq-submission-title-icon::before {
+    font-size: 24px !important;
+}
+
+.inner-fields-multiple-choice > img {
+    margin-bottom: -25px !important;
+}
+
+.submisson_title_date {
+    width: 190px;
+    height: min-content;
+}
+.fq-outer-title-icon {
+    font-size: large;
+}
