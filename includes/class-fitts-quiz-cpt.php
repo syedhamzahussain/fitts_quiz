@@ -281,9 +281,9 @@ if ( ! class_exists( 'Fitts_Quiz_Post_Type' ) ) {
 		public function fq_quiz_table( $post_columns, $post_type ) {
 			if ( 'fitts-quiz' == $post_type ) {
 				unset( $post_columns['date'] );
-				$post_columns['fitts_submissions'] = 'Quiz Submission(s)';
-				$post_columns['fitts_shortcode']   = 'Shortcode(s)';
-				$post_columns['date']              = 'Date';
+				$post_columns['fitts_submissions'] = __('Quiz Submission(s)', 'wc-quiz');
+				$post_columns['fitts_shortcode']   = __('Shortcode(s)', 'wc-quiz');
+				$post_columns['date']              = __('Date', 'wc-quiz');
 			}
 			return $post_columns;
 		}

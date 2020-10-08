@@ -4,7 +4,7 @@
 <div class="fitts-quiz-form fitts-quiz-form-<?php echo wp_kses_post( $atts['id'] ); ?>">
 	<input type="hidden" name="fitts_quiz_id" class="fitts_quiz_id" value="<?php echo wp_kses_post( $atts['id'] ); ?>">
 	<div class="fitts-progress-bar-percentage">
-		<?php echo 'Quiz '; ?><span class="fitts-progress-percentage-text">0%</span><?php echo ' Complete'; ?>
+		<?php echo __('Quiz ', 'wc-quiz'); ?><span class="fitts-progress-percentage-text">0%</span><?php echo __(' Complete', 'wc-quiz'); ?>
 		<span class="glyphicon glyphicon-repeat"></span>
 	</div>
 	<div class="progress">
@@ -80,8 +80,8 @@
 		<thead>
 			<tr>
 				<th>
-					<span> Recommended Products </span>
-					<button class="glyphicon glyphicon-arrow-left fitts-back"> Back</button>
+					<span><?php echo  __('Recommended Products ', 'wc-quiz'); ?></span>
+					<button class="glyphicon glyphicon-arrow-left fitts-back"><?php echo  __(' Back', 'wc-quiz'); ?></button>
 				</th>
 			</tr>
 		</thead>

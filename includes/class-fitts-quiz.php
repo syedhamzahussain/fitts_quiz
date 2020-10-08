@@ -66,7 +66,7 @@ if ( ! class_exists( 'Fitts_Quiz' ) ) {
 						$products[] = '<center><img src="' . $product_image . '" height="auto" width="200"></center><br>' .
 						'<p>' . $product->get_name() . '</p>' .
 						'<p>' . $product->get_short_description() . '</p>' .
-						'<a href="' . $product->get_permalink( $product->get_id() ) . '">More Information</a>';
+						'<a href="' . $product->get_permalink( $product->get_id() ) . '">'.__('More Information','wc-quiz').'</a>';
 					}
 
 					if ( isset( $_POST['customer_email'] ) && 'yes' == get_option( 'fitts_allow_email_product' ) ) {

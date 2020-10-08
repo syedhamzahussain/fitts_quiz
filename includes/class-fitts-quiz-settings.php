@@ -87,7 +87,7 @@ if ( ! class_exists( 'Fitts_Quiz_Settings' ) ) {
 			$settings = array(
 				array(
 					'title' => __( 'Fitts Quiz Settings', 'wc-quiz' ),
-					'desc'  => 'Settings for Fiits Quiz',
+					'desc'  => __( 'Settings for Fiits Quiz', 'wc-quiz' ),
 					'type'  => 'title',
 					'id'    => 'fitts_quiz_settigs_title',
 				),

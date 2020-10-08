@@ -6,6 +6,7 @@
  * Author: GC
  * License: GPL v2 or Later
  * Text Domain: wc-quiz
+ * Domain Path: /languages
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
