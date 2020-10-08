@@ -1,0 +1,175 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Package Name\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-08 15:52+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: includes/class-fitts-quiz-cpt.php:55
+msgctxt "post type general name"
+msgid "Fitts Quiz"
+msgstr ""
+
+#: includes/class-fitts-quiz-cpt.php:56
+msgctxt "post type singular name"
+msgid "Quiz"
+msgstr ""
+
+#: includes/class-fitts-quiz-cpt.php:57
+msgctxt "admin menu"
+msgid "Fitts Quiz"
+msgstr ""
+
+#: includes/class-fitts-quiz-cpt.php:58
+msgctxt "add new on admin bar"
+msgid "Fitts Quiz"
+msgstr ""
+
+#: includes/class-fitts-quiz-cpt.php:59
+msgctxt "quiz"
+msgid "Add New"
+msgstr ""
+
+#: includes/class-fitts-quiz-cpt.php:60
+msgid "Add New Quiz"
+msgstr ""
+
+#: includes/class-fitts-quiz-cpt.php:61
+msgid "New Quiz"
+msgstr ""
+
+#: includes/class-fitts-quiz-cpt.php:62
+msgid "Edit Quiz"
+msgstr ""
+
+#: includes/class-fitts-quiz-cpt.php:63
+msgid "View Quiz"
+msgstr ""
+
+#: includes/class-fitts-quiz-cpt.php:64
+msgid "All Quizes"
+msgstr ""
+
+#: includes/class-fitts-quiz-cpt.php:65
+msgid "Search Quizes"
+msgstr ""
+
+#: includes/class-fitts-quiz-cpt.php:66
+msgid "Parent Quizes:"
+msgstr ""
+
+#: includes/class-fitts-quiz-cpt.php:67
+msgid "No quizs found."
+msgstr ""
+
+#: includes/class-fitts-quiz-cpt.php:68
+msgid "No quizs found in Trash."
+msgstr ""
+
+#: includes/class-fitts-quiz-cpt.php:72
+msgid "Quizes for WooCommerce products."
+msgstr ""
+
+#: includes/class-fitts-quiz-cpt.php:98
+msgid "Quiz Details"
+msgstr ""
+
+#: includes/class-fitts-quiz-cpt.php:99
+msgid "Quiz Fields"
+msgstr ""
+
+#: includes/class-fitts-quiz-cpt.php:100
+msgid "Quiz Submissions"
+msgstr ""
+
+#: includes/class-fitts-quiz-cpt.php:101
+msgid "Quiz Shortcode"
+msgstr ""
+
+#: includes/class-fitts-quiz-cpt.php:284
+msgid "Quiz Submission(s)"
+msgstr ""
+
+#: includes/class-fitts-quiz-cpt.php:285
+msgid "Shortcode(s)"
+msgstr ""
+
+#: includes/class-fitts-quiz-cpt.php:286
+msgid "Date"
+msgstr ""
+
+#: includes/class-fitts-quiz-settings.php:59
+msgid "Fitts Quiz"
+msgstr ""
+
+#: includes/class-fitts-quiz-settings.php:89
+msgid "Fitts Quiz Settings"
+msgstr ""
+
+#: includes/class-fitts-quiz-settings.php:90
+msgid "Settings for Fiits Quiz"
+msgstr ""
+
+#: includes/class-fitts-quiz-settings.php:96
+msgid "Email results"
+msgstr ""
+
+#: includes/class-fitts-quiz-settings.php:98
+msgid "E-mails can only be send if a email question is included in the quiz"
+msgstr ""
+
+#: includes/class-fitts-quiz-settings.php:103
+msgid "GDRP terms & conditions"
+msgstr ""
+
+#: includes/class-fitts-quiz-settings.php:105
+msgid "Checking this box will make the terms and condition checkbox required"
+msgstr ""
+
+#: includes/class-fitts-quiz-settings.php:110
+msgid "GTM Script"
+msgstr ""
+
+#: includes/class-fitts-quiz-settings.php:112
+msgid "Enter the script you want to run on result page"
+msgstr ""
+
+#: includes/class-fitts-quiz.php:69
+msgid "More Information"
+msgstr ""
+
+#: includes/class-fitts-quiz.php:151
+msgid "No Questions Added in this Quiz"
+msgstr ""
+
+#: template/fitts-quiz-front.php:7
+msgid "Quiz "
+msgstr ""
+
+#: template/fitts-quiz-front.php:7
+msgid " Complete"
+msgstr ""
+
+#: template/fitts-quiz-front.php:71
+msgid "I Accept GDRP Terms And Conditons"
+msgstr ""
+
+#: template/fitts-quiz-front.php:83
+msgid "Recommended Products "
+msgstr ""
+
+#: template/fitts-quiz-front.php:84
+msgid " Back"
+msgstr ""

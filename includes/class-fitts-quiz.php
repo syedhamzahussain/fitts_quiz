@@ -110,7 +110,7 @@ if ( ! class_exists( 'Fitts_Quiz' ) ) {
 					echo json_encode(
 						array(
 							'status' => 'success',
-							'url'    => site_url() . '/cart',
+							'url'    => site_url() . '/cart?from=quiz',
 						)
 					);
 				} else {
@@ -148,7 +148,7 @@ if ( ! class_exists( 'Fitts_Quiz' ) ) {
 			$filter_quiz_questions = get_post_meta( $post_id, 'filter_quiz_questions', true );
 
 			if ( ! $filter_quiz_questions ) {
-				echo __( '<p style="text-align:center;">No Questions Added in this Quiz</p>', 'wc-quiz' );
+				echo "<p style='text-align:center;'>". __( 'No Questions Added in this Quiz', 'wc-quiz' )."</p>";
 				return;
 			}
 			include FQ_PLUGIN_DIR . '/template/fitts-quiz-front.php';
