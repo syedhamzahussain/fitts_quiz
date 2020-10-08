@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Fitts Quiz
  * Description: Custom WooCommerce product recommendations.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: GC
  * License: GPL v2 or Later
  * Text Domain: wc-quiz
