@@ -1,0 +1,208 @@
+.fitts-quiz-choices {
+	width: 40%;
+	height: 280px;
+	background-size: cover;
+	float: left;
+	margin: 1em;
+	text-align: center;
+	background-repeat: round;
+	border-radius: 15px;
+	border: 1px solid lightgray;
+}
+.fitts-quiz-choices-upper {
+	height: 80%;
+	position: relative;
+}
+.fitts-quiz-choices-upper p {
+	margin: 0;
+	margin-bottom: 0px;
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: black;
+	opacity: 0.6;
+	color: white;
+	width: 90%;
+	font-size: 20px;
+}
+.fitts-quiz-choices-lower {
+	height: 20%;
+	width: auto;
+}
+.fitts-quiz-choices-lower p {
+	margin-top: unset !important;
+	margin-bottom: unset !important;
+}
+.fitts-clear {
+	clear: both;
+}
+.glyphicon.glyphicon-circle-arrow-left,
+.glyphicon.glyphicon-circle-arrow-right {
+	color: white;
+	background: orange;
+	border-radius: 50PX;
+	border: 2px solid orange;
+	cursor: pointer;
+}
+.glyphicon.glyphicon-repeat {
+	float: right;
+	color: orange;
+	font-size: 25px;
+	cursor: pointer;
+}
+.fitts-question-navigator {
+	text-align: center;
+	font-size: 30px;
+	padding: 25px !important;
+}
+.fitts-quiz-question-text {
+	font-size: 20px;
+	margin: 0 !important;
+	padding-left: 15px !important;
+}
+.fitts-quiz-form .progress {
+	height: 6px !important;
+}
+.fitts-quiz-form .progress,
+.fitts-progress-bar-percentage {
+	margin-right: 50px;
+	margin-left: 15px;
+}
+.fitts-quiz-form .progress-bar {
+	background: teal;
+}
+.fitts-progress-bar-percentage {
+	width: 97%;
+}
+.fitts-question-footer {
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 30px;
+}
+.fitts_submit_quiz:hover {
+	background: darkcyan !important;
+	font-size: 16px !important;
+	font-weight: 600 !important;
+}
+.fitts_submit_quiz {
+	background: teal !important;
+	font-size: 16px !important;
+	font-weight: 600 !important;
+}
+/* radio button */
+.fitts-quiz-choices-radio {
+	display: block;
+	position: relative;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	text-align: center;
+}
+
+.fitts-quiz-choices-radio input {
+	position: absolute;
+	cursor: pointer;
+	z-index: 999999;
+	margin-left: 6px !important;
+	margin-top: 6px !important;
+	opacity: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+	position: absolute;
+	height: 25px;
+	width: 25px;
+	background-color: white;
+	border: 2px solid darkslategray;
+}
+
+.radiomark {
+	position: absolute;
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	background-color: white;
+	border: 2px solid darkslategray;
+}
+
+/* When the radio button is checked, add a blue background */
+.fitts-quiz-choices-radio input:checked ~ .checkmark,
+.fitts-quiz-choices-radio input:checked ~ .radiomark {
+	background-color: white;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after,
+.radiomark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.fitts-quiz-choices-radio input:checked ~ .checkmark:after,
+.fitts-quiz-choices-radio input:checked ~ .radiomark:after {
+	display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.fitts-quiz-choices-radio .checkmark:after {
+	top: 6px;
+	left: 6px;
+	width: 10px;
+	height: 10px;
+	background-color: darkslategray;
+}
+
+.fitts-quiz-choices-radio .radiomark:after {
+	top: 6px;
+	left: 6px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: darkslategray;
+}
+
+.fitts-quiz-questions {
+	height: auto;
+}
+
+.fitts-open-text {
+	text-align: center;
+	padding: 100px;
+	width: 100%;
+}
+
+.fitts-quiz-question {
+	top: 45%;
+}
+
+.fitts-quiz-open-text input {
+	width: 100%;
+	border-radius: 10px !important;
+}
+
+.fitts-no-img-choice {
+	font-size: 22px;
+	padding-top: 100px;
+	font-weight: 600;
+}
+.fitts-products-list td, .fitts-products-list th {
+	padding: 15px !important;
+}
+.glyphicon.glyphicon-arrow-left.fitts-back {
+	float: right;
+	color: white;
+	background: orange;
+	font-weight: bold;
+}
+.f-error {
+	border: 1px solid red !important;
+}
+.gdrp_term_condition_error {
+	color: red !important;
+}

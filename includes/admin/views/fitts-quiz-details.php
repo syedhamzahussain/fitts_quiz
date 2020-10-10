@@ -16,7 +16,7 @@
 			<div class="details">
 				<p>
 					<strong>Quiz Posted By:</strong>
-					<a href="<?php echo wp_kses_post( get_edit_user_link($post->post_author) ) ?>"><?php echo wp_kses_post( $author_email ); ?></a>
+					<a href="<?php echo wp_kses_post( get_edit_user_link( $post->post_author ) ); ?>"><?php echo wp_kses_post( $author_email ); ?></a>
 				</p>
 				<p>
 					<strong>Quiz Posted On:</strong>
