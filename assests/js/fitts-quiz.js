@@ -57,7 +57,7 @@ jQuery( document ).ready(
 					$( '.fitts-question-footer' ).show();
 					$( '.fitts-prev-quest' ).show();
 
-					complete = ( ( parseInt( curent_quest ) + 1 ) / ( $( '.fitts-quest' ).length - 1) ) * 100;
+					complete = ( ( parseInt( curent_quest ) ) / ( $( '.fitts-quest' ).length - 1) ) * 100;
 					$( '.fitts-progress-bar' ).css( {"width": parseInt( complete ) + "%"} );
 					$( '.fitts-progress-percentage-text' ).text( parseInt( complete ) + '%' );
 

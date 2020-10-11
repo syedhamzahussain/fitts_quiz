@@ -59,6 +59,7 @@ if ( ! class_exists( 'Fitts_Quiz' ) ) {
 					}
 					$all_products = array_unique( $all_products );
 					$total = 0;
+					
 					foreach ( $all_products as $key => $product_id) {
 						$product = wc_get_product( $product_id );
 						$product_image = wp_get_attachment_url( $product->get_image_id() );
@@ -70,7 +71,7 @@ if ( ! class_exists( 'Fitts_Quiz' ) ) {
 						'<a href="'.$product->get_permalink( $product->get_id() ).'">More Information</a>';
 					}
 
-					if ( isset( $_POST['customer_email'] ) && 'yes' == get_option( 'fitts_allow_email_product' ) ) {
+					if ( isset( $_POST['customer_email'] ) && 'yes' == get_option( 'fitts_allow_email_product' ) && $all_products ) {
 						$to = sanitize_text_field( wp_unslash( $_POST['customer_email'] ) );
 						$subject = "Recommended Products";
 						$headers = array('Content-Type: text/html; charset=UTF-8');
@@ -109,10 +110,16 @@ if ( ! class_exists( 'Fitts_Quiz' ) ) {
 						$cart_item_key = wc()->cart->add_to_cart( $product_id, $quantity, $cart_item_data );
 
 					}
+					if( ! $all_products ) {
+						$redirect_url = site_url() . '/cart?from=quiz&results=none';
+					}
+					else{
+						$redirect_url = site_url() . '/cart?from=quiz';
+					}
 					echo json_encode(
 						array(
 							'status' => 'success',
-							'url'    => site_url() . '/cart?from=quiz',
+							'url'    => $redirect_url,
 						)
 					);
 				} else {
