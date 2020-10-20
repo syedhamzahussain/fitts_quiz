@@ -15,6 +15,9 @@
 			<div class="fitts-quiz-ques-inner" >
 				<div class="fitts-quiz-question">
 					<p class="fitts-quiz-question-text"><?php echo wp_kses_post( $value['question'] ); ?></p>
+					<?php if ( isset( $value['sub_text'] ) && ! empty( $value['sub_text'] ) ) { ?>
+						<p class="fitts-quiz-sub-text"><?php echo wp_kses_post( $value['sub_text'] ); ?></p>
+					<?php } ?>
 				</div>
 				<div class="fitts-quiz-lower">
 					<?php if ( 'multiple' == $value['answerType'] ) { ?>
@@ -62,10 +65,17 @@
 			</p>
 		</div>	
 	<?php } ?>
-	<div class="fitts-question-navigator">
-		<span data-curent-quest="0" class="glyphicon glyphicon-circle-arrow-left fitts-prev-quest"></span>
-		<span data-curent-quest="0" class="glyphicon glyphicon-circle-arrow-right fitts-next-quest"></span>
+	<div class="fitts-question-navigator" style="display: block;">
+		<span data-curent-quest="0"  class="prev-button fitts-prev-quest">
+		  <span class="glyphicon glyphicon-arrow-left"></span>
+		  <span><?php echo __( 'Back', 'wc-quiz' ); ?></span>
+		</span>
+		<span data-curent-quest="0" class="next-button fitts-next-quest">
+			  <span><?php echo __( 'Next', 'wc-quiz' ); ?></span>
+		  <span class="glyphicon glyphicon-arrow-right"></span>
+		</span>
 	</div>
+
 	<div class="fitts-question-footer" style="<?php echo ( 1 == count( $filter_quiz_questions ) ) ? '' : 'display:none'; ?>">
 		<?php if ( 'yes' == get_option( 'gdrp_term_condition' ) ) { ?>
 			<input type="checkbox" id="gdrp_term_condition" class="gdrp_term_condition" value="yes" required="required" ><span style="margin-left:15px;"><?php echo __( 'I Accept GDRP Terms And Conditons', 'wc-quiz' ); ?></span><br>

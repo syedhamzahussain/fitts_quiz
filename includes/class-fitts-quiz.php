@@ -48,41 +48,44 @@ if ( ! class_exists( 'Fitts_Quiz' ) ) {
 
 			if ( $quiz_submissions ) {
 
-				if ( $linked_products ) {
+				if( $linked_products ) {
+						
+					foreach ($linked_products as $key => $value) {
 
-					foreach ( $linked_products as $key => $value ) {
-
-						if ( $value ) {
+						if( $value ){
 							$all_products = array_merge( $all_products, explode( ',', $value ) );
 						}
+						
 					}
 					$all_products = array_unique( $all_products );
-					foreach ( $all_products as $key => $product_id ) {
-						$product             = wc_get_product( $product_id );
-						$product_image       = wp_get_attachment_url( $product->get_image_id() );
-						$attachments[]       = $product_image;
-						$recomend_products[] = '<a href="' . $product->get_permalink( $product->get_id() ) . '">' . $product->get_name() . '</a>';
-
-						$products[] = '<center><img src="' . $product_image . '" height="auto" width="200"></center><br>' .
-						'<p>' . $product->get_name() . '</p>' .
-						'<p>' . $product->get_short_description() . '</p>' .
-						'<a href="' . $product->get_permalink( $product->get_id() ) . '">'.__('More Information','wc-quiz').'</a>';
+					$total = 0;
+					
+					foreach ( $all_products as $key => $product_id) {
+						$product = wc_get_product( $product_id );
+						$product_image = wp_get_attachment_url( $product->get_image_id() );
+						$recomend_products[] = '<img src="'.$product_image.'" height="auto" width="100"><br><a href="'.$product->get_permalink( $product->get_id() ).'">'.$product->get_name().'</a> - '.$product->get_price_html(); 
+						$total += $product->get_price();
+						$products[] = '<center><img src="'.$product_image.'" height="auto" width="200"></center><br>'.
+						'<p>'.$product->get_name().'</p>'.
+						'<p>'.$product->get_short_description().'</p>'.
+						'<a href="'.$product->get_permalink( $product->get_id() ).'">More Information</a>';
 					}
 
-					if ( isset( $_POST['customer_email'] ) && 'yes' == get_option( 'fitts_allow_email_product' ) ) {
-						$to      = sanitize_text_field( wp_unslash( $_POST['customer_email'] ) );
-						$subject = 'Recommended Products';
+					if ( isset( $_POST['customer_email'] ) && 'yes' == get_option( 'fitts_allow_email_product' ) && $all_products ) {
+						$to = sanitize_text_field( wp_unslash( $_POST['customer_email'] ) );
+						$subject = "Recommended Products";
+						$headers = array('Content-Type: text/html; charset=UTF-8');
 
-						$message .= '<p><b>Recommended Products</b></p>';
-						foreach ( $recomend_products as $key => $product ) {
-							$message .= '<p>' . $product . '</p>';
+						$message .= "<p><b>Recommended Products</b></p>";
+						foreach ( $recomend_products as $key => $product ) { 
+							$message .= "<p>" . $product ."</p>"; 
 						}
-						// Always set content-type when sending HTML email
-						$headers  = 'MIME-Version: 1.0' . "\r\n";
-						$headers .= 'Content-type:text/html;charset=UTF-8' . "\r\n";
+						$message .= "<p><b>Total</b> " . wc_price($total) ."</p>";
+						$message .= "<p>" . wc_price($total/31) ." <b>per day</b></p>";
 
 						wp_mail( $to, $subject, $message, $headers );
 					}
+					
 				}
 
 				$post_arr = array(
@@ -107,10 +110,16 @@ if ( ! class_exists( 'Fitts_Quiz' ) ) {
 						$cart_item_key = wc()->cart->add_to_cart( $product_id, $quantity, $cart_item_data );
 
 					}
+					if( ! $all_products ) {
+						$redirect_url = site_url() . '/cart?from=quiz&results=none';
+					}
+					else{
+						$redirect_url = site_url() . '/cart?from=quiz';
+					}
 					echo json_encode(
 						array(
 							'status' => 'success',
-							'url'    => site_url() . '/cart?from=quiz',
+							'url'    => $redirect_url,
 						)
 					);
 				} else {
