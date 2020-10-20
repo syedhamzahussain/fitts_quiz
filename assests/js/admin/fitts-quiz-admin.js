@@ -160,6 +160,7 @@ jQuery( document ).ready(
 
 						obj['title']      = $( value ).find( '#fitts_field_title' ).val();
 						obj['question']   = $( value ).find( '#fitts_question' ).val().trim();
+						obj['sub_text']   = $( value ).find( '#fitts_sub_text' ).val().trim();
 						obj['answerType'] = $( value ).find( 'select[name="answer_type"]' ).val();
 
 						if ( 'multiple' == $( value ).find( 'select[name="answer_type"]' ).val() ) {

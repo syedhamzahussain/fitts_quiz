@@ -8,6 +8,7 @@
 	background-repeat: round;
 	border-radius: 15px;
 	border: 1px solid lightgray;
+	cursor: pointer;
 }
 .fitts-quiz-choices-upper {
 	height: 80%;
@@ -37,14 +38,32 @@
 .fitts-clear {
 	clear: both;
 }
-.glyphicon.glyphicon-circle-arrow-left,
-.glyphicon.glyphicon-circle-arrow-right {
-	color: white;
-	background: orange;
-	border-radius: 50PX;
-	border: 2px solid orange;
+
+
+.glyphicon {
+    top: 3px !important;
+}
+
+.next-button {
+    margin-left: 10px;
+    border: 1px solid orange;
+    width: 115px;
+    display: inline-block;
+    border-radius: 50px;
+    color: orange;
 	cursor: pointer;
 }
+
+.prev-button {
+    margin-right: 10px;
+    border: 1px solid orange;
+    width: 115px;
+    display: inline-block;
+    border-radius: 50px;
+    color: orange;
+	cursor: pointer;
+}
+
 .glyphicon.glyphicon-repeat {
 	float: right;
 	color: orange;
@@ -53,12 +72,18 @@
 }
 .fitts-question-navigator {
 	text-align: center;
-	font-size: 30px;
+	font-size: 25px;
 	padding: 25px !important;
 }
 .fitts-quiz-question-text {
 	font-size: 20px;
-	margin: 0 !important;
+	margin: 0px !important;
+	padding: 0px !important;
+	padding-left: 15px !important;
+}
+.fitts-quiz-sub-text {
+    padding: 0px !important;
+	margin: 0px !important;
 	padding-left: 15px !important;
 }
 .fitts-quiz-form .progress {

@@ -20,9 +20,14 @@
 						
 						<p class="fitts-field-question inner-field-wrapper">
 							<label for=""><b>Question :</b></label><br>
-							<textarea name="fitts_question" id="fitts_question" cols="41" rows="1"><?php echo ( $filter_quiz_question['question'] ) ? wp_kses_post( sanitize_text_field( wp_unslash( $filter_quiz_question['question'] ) ) ) : ''; ?></textarea>
+							<textarea name="fitts_question" id="fitts_question" cols="41" rows="1"><?php echo  isset( $filter_quiz_question['question'] ) ? wp_kses_post( sanitize_text_field( wp_unslash( $filter_quiz_question['question'] ) ) ) : ''; ?></textarea>
 						</p>
 
+						<p class="fitts-field-sub-text inner-field-wrapper">
+							<label for=""><b>Sub Text :</b></label><br>
+							<textarea name="fitts_sub_text" id="fitts_sub_text" cols="41" rows="1"><?php echo  isset( $filter_quiz_question['sub_text'] ) ? wp_kses_post( sanitize_text_field( wp_unslash( $filter_quiz_question['sub_text'] ) ) ) : ''; ?></textarea>
+						</p>
+						
 						<p class="fitts-field-ans-type inner-field-wrapper">
 							<label for=""><b>Answer Type :</b></label><br>
 							<select name="answer_type" id="answer_type_id" class="answer_type" >
@@ -141,6 +146,11 @@
 				<p class="fitts-field-question inner-field-wrapper">
 					<label for=""><b>Question :</b></label><br>
 					<textarea name="fitts_question" id="fitts_question" cols="41" rows="1"></textarea>
+				</p>
+				
+				<p class="fitts-field-sub-text inner-field-wrapper">
+					<label for=""><b>Sub Text :</b></label><br>
+					<textarea name="fitts_sub_text" id="fitts_sub_text" cols="41" rows="1"></textarea>
 				</p>
 
 				<p class="fitts-field-ans-type inner-field-wrapper">
