@@ -11,6 +11,16 @@ jQuery( document ).ready(
 			$( '.fitts-next-quest' ).hide();
 		}
 
+		$( '.fitts-quiz-choices' ).on( 'click', function(){
+			
+			if ( true == $(this).find('.fitts_front_choice').prop('checked') ) {
+				$(this).find('.fitts_front_choice').prop('checked', false);
+		   }
+			else{
+				$(this).find('.fitts_front_choice').prop('checked', true);
+		   }
+		});
+		
 		$( '.fitts-prev-quest' ).on(
 			'click',
 			function () {
@@ -19,22 +29,23 @@ jQuery( document ).ready(
 				var complete     = 0;
 
 				$( this ).closest( '.fitts-quiz-form' ).find( '.fitts-question-' + curent_quest ).hide();
-				// if( 0 !==  parseInt( $( '#fitts_isconditional-'+ ( parseInt( curent_quest )-1 ) ).val() ) ) {
-				// curent_quest = parseInt(curent_quest)-1;
-				// }
-				$( this ).closest( '.fitts-quiz-form' ).find( '.fitts-question-' + ( parseInt( curent_quest ) - 1 ) ).show();
-				$( this ).attr( 'data-curent-quest', ( parseInt( curent_quest ) - 1 ) );
-				$( '.fitts-next-quest' ).attr( 'data-curent-quest', ( parseInt( curent_quest ) - 1 ) );
+				
+				curent_quest = prev_quest_to_show( parseInt( curent_quest )-1 );
+				
+				$( this ).closest( '.fitts-quiz-form' ).find( '.fitts-question-' + ( parseInt( curent_quest ) ) ).show();
+				$( this ).attr( 'data-curent-quest', ( parseInt( curent_quest ) ) );
+				$( '.fitts-next-quest' ).attr( 'data-curent-quest', ( parseInt( curent_quest ) ) );
 
-				if ( 0 == ( parseInt( curent_quest ) - 1 ) ) {
+				$( '.fitts-question-footer' ).hide();
+				$( '.fitts-next-quest' ).show();
+
+				if ( 0 == ( parseInt( curent_quest ) ) ) {
 					$( this ).hide();
 				} else {
 					$( this ).show();
 				}
-				$( '.fitts-question-footer' ).hide();
-				$( '.fitts-next-quest' ).show();
-
-				complete = ( ( parseInt( curent_quest ) - 1 ) / ( $( '.fitts-quest' ).length - 1) ) * 100;
+				
+				complete = ( ( parseInt( curent_quest ) ) / ( $( '.fitts-quest' ).length - 1) ) * 100;
 				$( '.fitts-progress-bar' ).css( {"width": parseInt( complete ) + "%"} );
 				$( '.fitts-progress-percentage-text' ).text( parseInt( complete ) + '%' );
 
@@ -57,7 +68,7 @@ jQuery( document ).ready(
 					$( '.fitts-question-footer' ).show();
 					$( '.fitts-prev-quest' ).show();
 
-					complete = ( ( parseInt( curent_quest ) + 1 ) / ( $( '.fitts-quest' ).length - 1) ) * 100;
+					complete = ( ( parseInt( curent_quest ) ) / ( $( '.fitts-quest' ).length - 1) ) * 100;
 					$( '.fitts-progress-bar' ).css( {"width": parseInt( complete ) + "%"} );
 					$( '.fitts-progress-percentage-text' ).text( parseInt( complete ) + '%' );
 
@@ -205,6 +216,15 @@ jQuery( document ).ready(
 
 	}
 );
+
+function prev_quest_to_show( curent_quest ) {
+	console.log( curent_quest )
+	if( 0 !==  parseInt( $( '#fitts_isconditional-'+ ( parseInt( curent_quest ) ) ).val() ) ) {
+		curent_quest = parseInt( curent_quest )-1;
+		curent_quest = prev_quest_to_show( curent_quest );
+	}
+	return curent_quest;
+}
 
 function next_quest_to_show( curent_quest, prev_answer_text ) {
 	$( '.fitts-question-' + parseInt( curent_quest ) ).find( '.fitts_front_choice' ).each(
