@@ -1,15 +1,17 @@
 .fitts-quiz-choices {
-	width: 40%;
-	height: 280px;
-	background-size: cover;
-	float: left;
-	margin: 1em;
-	text-align: center;
-	background-repeat: round;
-	border-radius: 15px;
-	border: 1px solid lightgray;
-	cursor: pointer;
+    width: 40%;
+    min-height: 200px;
+    background-size: cover;
+    float: left;
+    margin: 1em;
+    text-align: center;
+    background-repeat: round;
+    border-radius: 15px;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    padding: 20px 15px;
 }
+
 .fitts-quiz-choices-upper {
 	height: 80%;
 	position: relative;
@@ -125,14 +127,12 @@
 	-ms-user-select: none;
 	user-select: none;
 	text-align: center;
+	padding: 10px;
 }
 
 .fitts-quiz-choices-radio input {
-	position: absolute;
 	cursor: pointer;
 	z-index: 999999;
-	margin-left: 6px !important;
-	margin-top: 6px !important;
 	opacity: 0;
 }
 
@@ -143,6 +143,8 @@
 	width: 25px;
 	background-color: white;
 	border: 2px solid darkslategray;
+	margin-left: -20px;
+	margin-top: 3px;
 }
 
 .radiomark {
@@ -152,6 +154,8 @@
 	border-radius: 50%;
 	background-color: white;
 	border: 2px solid darkslategray;
+	margin-left: -20px;
+	margin-top: 3px;
 }
 
 /* When the radio button is checked, add a blue background */
@@ -210,11 +214,17 @@
 	width: 100%;
 	border-radius: 10px !important;
 }
-
+.fitts-quiz-choices-text{
+	padding: 0px !important;
+}
 .fitts-no-img-choice {
 	font-size: 22px;
-	padding-top: 100px;
-	font-weight: 600;
+	min-height: 110px;
+	display: flex;
+	margin: auto;
+	align-items: center;
+	justify-content: center;
+	word-wrap: anywhere;
 }
 .fitts-products-list td, .fitts-products-list th {
 	padding: 15px !important;

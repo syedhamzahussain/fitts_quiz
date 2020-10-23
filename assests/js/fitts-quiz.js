@@ -15,10 +15,20 @@ jQuery( document ).ready(
 			
 			if ( true == $(this).find('.fitts_front_choice').prop('checked') ) {
 				$(this).find('.fitts_front_choice').prop('checked', false);
-		   }
+			}
 			else{
 				$(this).find('.fitts_front_choice').prop('checked', true);
-		   }
+			}
+	
+			$( '.fitts_front_choice' ).each(function( index, value ) {
+				if( $(value).prop('checked') == true ) {
+					$(value).closest( '.fitts-quiz-choices' ).css({"background-color": "#df1717","color": "white"});				
+				}
+				else{
+					$(value).closest( '.fitts-quiz-choices' ).css({"background-color": "inherit","color": "black"});
+				}
+			})
+			
 		});
 		
 		$( '.fitts-prev-quest' ).on(
@@ -218,7 +228,6 @@ jQuery( document ).ready(
 );
 
 function prev_quest_to_show( curent_quest ) {
-	console.log( curent_quest )
 	if( 0 !==  parseInt( $( '#fitts_isconditional-'+ ( parseInt( curent_quest ) ) ).val() ) ) {
 		curent_quest = parseInt( curent_quest )-1;
 		curent_quest = prev_quest_to_show( curent_quest );
